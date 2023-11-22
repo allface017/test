@@ -46,22 +46,22 @@ class MainScene extends Phaser.Scene {
     // 毎フレーム実行される繰り返し処理
     update() {
         // プレイヤーの向きフラグを変更
-        if (this.player.x >= D_WIDTH - 100) this.player_direction = -1;
-        if (this.player.x <= 100) this.player_direction = 1;
+        if (this.player.y >= D_WIDTH - 100) this.player_direction = -1;
+        if (this.player.y <= 100) this.player_direction = 1;
         // プレイヤーの移動
         if (this.player_direction == 1) {
-            this.player.x += 5;// 横方向へ移動を設定
+            this.player.y += 5;// 横方向へ移動を設定
         } else {
-            this.player.x -= 5;// 横方向へ移動を設定
+            this.player.y -= 5;// 横方向へ移動を設定
         }
         // プレイヤーの向きフラグを変更
-        if (this.player2.y >= D_HEIGHT - 100) this.player2_direction = -1;
-        if (this.player2.y <= 100) this.player2_direction = 1;
+        if (this.player2.x >= D_HEIGHT - 100) this.player2_direction = -1;
+        if (this.player2.x <= 100) this.player2_direction = 1;
         // プレイヤーの移動
         if (this.player2_direction == 1) {
-            this.player2.y += 45;// 横方向へ移動を設定
+            this.player2.x += 45;// 横方向へ移動を設定
         } else {
-            this.player2.y -= 45;// 横方向へ移動を設定
+            this.player2.x -= 45;// 横方向へ移動を設定
         }
         //スター
         if (this.player3.y >= D_HEIGHT - 100 || this.player3.x >= D_WIDTH - 100) this.player3_direction = -1;
